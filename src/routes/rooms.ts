@@ -1,29 +1,18 @@
 import { Router } from 'express';
+import fs from 'fs';
+import path from 'path';
 
 const router = Router();
 
+const getRoomsData = (): any[] => {
+    const dataPath = path.join(__dirname, '../datas/Room.json');
+    const rawData = fs.readFileSync(dataPath, 'utf-8');
+    return JSON.parse(rawData);
+};
+
 router.get('/', (req, res) => {
-  res.json([{ id: 1, name: 'Suite', price: 150 }]);
-});
-
-router.get('/:id', (req, res) => {
-  const roomId = req.params.id;
-  res.json({ id: roomId, name: 'Suite', price: 150 });
-});
-
-router.post('/', (req, res) => {
-  const newRoom = req.body;
-  res.status(201).json(newRoom);
-});
-
-router.put('/:id', (req, res) => {
-  const roomId = req.params.id;
-  const updatedRoom = req.body;
-  res.json({ id: roomId, ...updatedRoom });
-});
-
-router.delete('/:id', (req, res) => {
-  res.status(204).send();
+    const rooms = getRoomsData();
+    res.json(rooms);
 });
 
 export default router;

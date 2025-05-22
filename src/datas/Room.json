@@ -178,5 +178,39 @@
     "roomImage": "https://example.com/images/room101.jpg",
     "roomStatus": "Available",
     "description": "Spacious suite with ocean views and a private balcony."
+  },
+  {
+    "roomId": "R001",
+    "roomNumber": "101",
+    "roomName": "Ocean View Suite",
+    "bedType": "King",
+    "roomFloor": "1",
+    "facilities": [
+      "WiFi",
+      "Air Conditioning",
+      "Balcony",
+      "Mini Bar"
+    ],
+    "rate": 150,
+    "roomImage": "https://example.com/images/room101.jpg",
+    "roomStatus": "Available",
+    "description": "Spacious suite with ocean views and a private balcony."
+  },
+  {
+    "roomId": "R001",
+    "roomNumber": "101",
+    "roomName": "Ocean View Suite",
+    "bedType": "King",
+    "roomFloor": "1",
+    "facilities": [
+      "WiFi",
+      "Air Conditioning",
+      "Balcony",
+      "Mini Bar"
+    ],
+    "rate": 150,
+    "roomImage": "https://example.com/images/room101.jpg",
+    "roomStatus": "Available",
+    "description": "Spacious suite with ocean views and a private balcony."
   }
 ]

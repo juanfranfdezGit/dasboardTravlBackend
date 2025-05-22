@@ -25,8 +25,6 @@ describe('POST /api/rooms', () => {
                 .post('/api/login')
                 .send({ username: 'admin', password: 'admin' });
 
-                console.log('Token obtenido en login:', res.body.token);
-
             token = res.body.token;
         });
 
@@ -48,8 +46,6 @@ describe('POST /api/rooms', () => {
             .post('/api/rooms')
             .set('Authorization', `Bearer ${token}`)
             .send(newRoom);
-
-        console.log(response.body);
 
         expect(response.status).toBe(200); 
         expect(response.body).toHaveProperty('roomId', newRoom.roomId);

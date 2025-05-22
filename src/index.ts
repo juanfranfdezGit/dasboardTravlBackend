@@ -4,6 +4,7 @@ import bookingsRouter from './controllers/bookings';
 import employeesRouter from './controllers/employees';
 import guestsRouter from './controllers/guests';
 import loginRouter from './controllers/login';
+import infoRouter from './controllers/info';
 
 import { authenticateJWT } from './middleware/authenticateJWT';
 
@@ -13,6 +14,7 @@ const PORT = 3000;
 app.use(express.json());
 
 app.use('/api/login', loginRouter);
+app.use('/api/info', infoRouter);
 
 app.use(authenticateJWT);
 

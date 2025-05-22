@@ -12,7 +12,11 @@ export interface JwtPayload {
     exp: number;
 }
 
-export function authenticateJWT(req: Request, res: Response, next: NextFunction): void {
+interface AuthenticatedRequest extends Request {
+    user?: JwtPayload;
+}
+
+export function authenticateJWT(req: AuthenticatedRequest, res: Response, next: NextFunction): void {
     const authHeader = req.headers.authorization;
 
     if (!authHeader || !authHeader.startsWith('Bearer ')) {

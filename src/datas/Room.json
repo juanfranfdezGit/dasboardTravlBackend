@@ -5,7 +5,12 @@
     "roomName": "Ocean View Suite",
     "bedType": "King",
     "roomFloor": "1",
-    "facilities": ["WiFi", "Air Conditioning", "Balcony", "Mini Bar"],
+    "facilities": [
+      "WiFi",
+      "Air Conditioning",
+      "Balcony",
+      "Mini Bar"
+    ],
     "rate": 150,
     "roomImage": "https://example.com/images/room101.jpg",
     "roomStatus": "Available",
@@ -17,7 +22,12 @@
     "roomName": "Garden Deluxe",
     "bedType": "Queen",
     "roomFloor": "1",
-    "facilities": ["WiFi", "Air Conditioning", "Garden View", "Coffee Maker"],
+    "facilities": [
+      "WiFi",
+      "Air Conditioning",
+      "Garden View",
+      "Coffee Maker"
+    ],
     "rate": 120,
     "roomImage": "https://example.com/images/room102.jpg",
     "roomStatus": "Booked",
@@ -29,7 +39,11 @@
     "roomName": "City Lights Room",
     "bedType": "Twin",
     "roomFloor": "2",
-    "facilities": ["WiFi", "Air Conditioning", "City View"],
+    "facilities": [
+      "WiFi",
+      "Air Conditioning",
+      "City View"
+    ],
     "rate": 100,
     "roomImage": "https://example.com/images/room201.jpg",
     "roomStatus": "Available",
@@ -41,7 +55,12 @@
     "roomName": "Executive Suite",
     "bedType": "King",
     "roomFloor": "2",
-    "facilities": ["WiFi", "Air Conditioning", "Work Desk", "Mini Bar"],
+    "facilities": [
+      "WiFi",
+      "Air Conditioning",
+      "Work Desk",
+      "Mini Bar"
+    ],
     "rate": 200,
     "roomImage": "https://example.com/images/room202.jpg",
     "roomStatus": "Booked",
@@ -53,7 +72,12 @@
     "roomName": "Penthouse Loft",
     "bedType": "King",
     "roomFloor": "3",
-    "facilities": ["WiFi", "Air Conditioning", "Jacuzzi", "Terrace"],
+    "facilities": [
+      "WiFi",
+      "Air Conditioning",
+      "Jacuzzi",
+      "Terrace"
+    ],
     "rate": 350,
     "roomImage": "https://example.com/images/room301.jpg",
     "roomStatus": "Available",
@@ -65,7 +89,10 @@
     "roomName": "Standard Room",
     "bedType": "Queen",
     "roomFloor": "3",
-    "facilities": ["WiFi", "Air Conditioning"],
+    "facilities": [
+      "WiFi",
+      "Air Conditioning"
+    ],
     "rate": 90,
     "roomImage": "https://example.com/images/room302.jpg",
     "roomStatus": "Available",
@@ -77,7 +104,12 @@
     "roomName": "Family Suite",
     "bedType": "King + Sofa Bed",
     "roomFloor": "4",
-    "facilities": ["WiFi", "Air Conditioning", "Kitchenette", "Balcony"],
+    "facilities": [
+      "WiFi",
+      "Air Conditioning",
+      "Kitchenette",
+      "Balcony"
+    ],
     "rate": 180,
     "roomImage": "https://example.com/images/room401.jpg",
     "roomStatus": "Booked",
@@ -89,7 +121,9 @@
     "roomName": "Economy Room",
     "bedType": "Twin",
     "roomFloor": "4",
-    "facilities": ["WiFi"],
+    "facilities": [
+      "WiFi"
+    ],
     "rate": 70,
     "roomImage": "https://example.com/images/room402.jpg",
     "roomStatus": "Available",
@@ -101,7 +135,12 @@
     "roomName": "Honeymoon Suite",
     "bedType": "King",
     "roomFloor": "5",
-    "facilities": ["WiFi", "Air Conditioning", "Jacuzzi", "Balcony"],
+    "facilities": [
+      "WiFi",
+      "Air Conditioning",
+      "Jacuzzi",
+      "Balcony"
+    ],
     "rate": 300,
     "roomImage": "https://example.com/images/room501.jpg",
     "roomStatus": "Booked",
@@ -113,10 +152,31 @@
     "roomName": "Business Room",
     "bedType": "Queen",
     "roomFloor": "5",
-    "facilities": ["WiFi", "Air Conditioning", "Work Desk"],
+    "facilities": [
+      "WiFi",
+      "Air Conditioning",
+      "Work Desk"
+    ],
     "rate": 130,
     "roomImage": "https://example.com/images/room502.jpg",
     "roomStatus": "Available",
     "description": "Room optimized for business travelers."
+  },
+  {
+    "roomId": "R001",
+    "roomNumber": "101",
+    "roomName": "Ocean View Suite",
+    "bedType": "King",
+    "roomFloor": "1",
+    "facilities": [
+      "WiFi",
+      "Air Conditioning",
+      "Balcony",
+      "Mini Bar"
+    ],
+    "rate": 150,
+    "roomImage": "https://example.com/images/room101.jpg",
+    "roomStatus": "Available",
+    "description": "Spacious suite with ocean views and a private balcony."
   }
 ]

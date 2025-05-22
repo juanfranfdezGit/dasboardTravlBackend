@@ -14,6 +14,7 @@ router.post('/', (req, res): void => {
     const token = login(username, password);
 
     if (token) {
+        res.json({ token });
         res.status(200).json({message: 'Login Exitoso'})
         return
     } else {

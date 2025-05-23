@@ -1,7 +1,7 @@
 import { Router } from 'express';
 import fs from 'fs';
 import path from 'path';
-import getRoomsData from '../service/rooms';
+import getRoomsData from '../services/rooms';
 
 const router = Router();
 

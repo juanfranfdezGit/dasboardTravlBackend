@@ -5,13 +5,9 @@ const bookingSchema = new mongoose.Schema({
     bookingID: { type: String, required: true, unique: true },
 
     guest: {
-        guestId: { type: String, required: true },
-        personName: { type: String, required: true },
-        personImage: { type: String, required: false },
-        specialRequest: {
-            text: { type: String, default: '' },
-            status: { type: Boolean, default: false }
-        }
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Guest',
+        required: true,
     },
 
     room: {

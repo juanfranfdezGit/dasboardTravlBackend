@@ -1,18 +1,16 @@
 import { Router } from 'express';
-import fs from 'fs';
-import path from 'path';
+import Booking from '../database/models/booking';
 
 const router = Router();
 
-const getBookingsData = (): any[] => {
-    const dataPath = path.join(__dirname, '../datas/Booking.json');
-    const rawData = fs.readFileSync(dataPath, 'utf-8');
-    return JSON.parse(rawData);
-};
-
-router.get('/', (req, res) => {
-    const bookings = getBookingsData();
-    res.json(bookings);
+router.get('/', async (req, res) => {
+    try {
+        const bookings = await Booking.find().populate('room');
+        res.json(bookings);
+        console.log(bookings);
+    } catch (error) {
+        res.status(500).json({ error: 'Error al obtener las reservas', details: error});
+    }
 });
 
 export default router;

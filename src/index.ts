@@ -5,11 +5,14 @@ import employeesRouter from './controllers/employees';
 import guestsRouter from './controllers/guests';
 import loginRouter from './controllers/login';
 import infoRouter from './controllers/info';
+import connectDB from './database/db';
 
 import { authenticateJWT } from './middleware/authenticateJWT';
 
 const app = express();
 const PORT = 3000;
+
+connectDB();
 
 app.use(express.json());
 

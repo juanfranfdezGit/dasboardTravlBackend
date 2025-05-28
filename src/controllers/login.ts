@@ -3,7 +3,7 @@ import { login } from '../middleware/auth';
 
 const router = express.Router();
 
-router.post('/', (req, res): void => {
+router.post('/', async (req, res): Promise<void> => {
     const {username, password} = req.body;
 
     if (!username || !password) {
@@ -11,7 +11,7 @@ router.post('/', (req, res): void => {
         return
     }
 
-    const token = login(username, password);
+    const token = await login(username, password);
 
     if (token) {
         res.json({ token });

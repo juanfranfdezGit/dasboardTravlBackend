@@ -1,31 +1,34 @@
 import jwt from 'jsonwebtoken';
 import dotenv from 'dotenv';
+import User from '../database/models/users';
 
 dotenv.config();
 
-type User = {
-    username: string;
-    password: string;
-};
-
-const user: User = {
-    username: "admin",
-    password: "admin", 
-};
-
 const JWT_SECRET = process.env.JWT_SECRET as string;
 const JWT_EXPIRES_IN: string = process.env.JWT_EXPIRES_IN ?? '1h';
-
 const expiresIn = JWT_EXPIRES_IN as jwt.SignOptions['expiresIn'];
 
-export function login(username: string, password: string): string | null {
-    if (username === user.username && password === user.password) {
+export async function login( username: string, password: string ): Promise< string | null > {
+    try {
+        const user = await User.findOne({ username })
 
-        const token = jwt.sign({ username }, JWT_SECRET, { expiresIn });
+        if(!user) {
+            return null;
+        }
 
+        const passwordMatch = password === user.password
+
+        if(!passwordMatch) {
+            return null;
+        }
+
+        const token = jwt.sign({ username, id: user._id }, JWT_SECRET, { expiresIn });
         return token;
+    } catch (error) {
+        console.error('Login error', error);
+        return null;
     }
-    return null;
+    
 }
 
 export function verifyToken(token: string) {

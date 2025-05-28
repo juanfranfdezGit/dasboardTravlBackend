@@ -1,7 +1,6 @@
 import mongoose from 'mongoose';
 
 const employeeSchema = new mongoose.Schema({
-  id: { type: String, required: true, unique: true },     
   personName: { type: String, required: true },
   personImage: { type: String, required: true },             
   joined: { type: Date, required: true },                    

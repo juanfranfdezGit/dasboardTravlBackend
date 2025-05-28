@@ -5,7 +5,6 @@ const guestSchema = new mongoose.Schema({
     personNumber: { type: String },
     personName: { type: String, required: true },
     personImage: { type: String },
-
     specialRequest:
     {
         text: { type: String },

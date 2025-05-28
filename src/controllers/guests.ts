@@ -1,17 +1,10 @@
 import { Router } from 'express';
-import fs from 'fs';
-import path from 'path';
+import Guest from '../database/models/guest';
 
 const router = Router();
 
-const getGuestsData = (): any[] => {
-    const dataPath = path.join(__dirname, '../datas/Guest.json');
-    const rawData = fs.readFileSync(dataPath, 'utf-8');
-    return JSON.parse(rawData);
-};
-
-router.get('/', (req, res) => {
-    const guests = getGuestsData();
+router.get('/', async (req, res) => {
+    const guests = await Guest.find();
     res.json(guests);
 });
 

@@ -1,17 +1,10 @@
 import { Router } from 'express';
-import fs from 'fs';
-import path from 'path';
+import Employee from '../database/models/employee';
 
 const router = Router();
 
-const getEmployeesData = (): any[] => {
-    const dataPath = path.join(__dirname, '../datas/Employee.json');
-    const rawData = fs.readFileSync(dataPath, 'utf-8');
-    return JSON.parse(rawData);
-};
-
-router.get('/', (req, res) => {
-    const employees = getEmployeesData();
+router.get('/', async (req, res) => {
+    const employees = await Employee.find();
     res.json(employees);
 });
 

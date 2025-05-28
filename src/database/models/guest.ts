@@ -1,7 +1,6 @@
 import mongoose from 'mongoose';
 
 const guestSchema = new mongoose.Schema({
-    guestId: { type: String, required: true, unique: true }, 
     personNumber: { type: String },
     personName: { type: String, required: true },
     personImage: { type: String },

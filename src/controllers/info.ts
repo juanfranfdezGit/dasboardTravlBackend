@@ -7,8 +7,8 @@ infoRouter.get('/', (_req, res) => {
         hotelName: "Hotel Miranda",
         availableEndpoints: 
         [
-            { path: "/api/rooms", methods: ["GET"] },
-            { path: "/api/bookings", methods: ["GET"] },
+            { path: "/api/rooms", methods: [ "GET", "UPDATE", "POST", "DELETE" ] },
+            { path: "/api/bookings", methods: [ "GET", "UPDATE", "POST", "DELETE" ] },
             { path: "/api/employees", methods: [ "GET", "UPDATE", "POST", "DELETE" ] },
             { path: "/api/guests", methods: [ "GET", "UPDATE", "POST", "DELETE" ] }
         ]

@@ -14,12 +14,9 @@ router.post('/', async (req, res): Promise<void> => {
     const token = await login(username, password);
 
     if (token) {
-        res.json({ token });
-        res.status(200).json({message: 'Login Exitoso'})
-        return
+        res.status(200).json({ token, message: 'Login Exitoso' }); 
     } else {
         res.status(401).json({message: 'Login Incorrecto'})
-        return
     }
 })
 

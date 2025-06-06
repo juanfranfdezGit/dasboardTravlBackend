@@ -35,8 +35,10 @@ router.post('/', async (req, res) => {
         const newEmployee = new Employee ({ personName, personImage, joined, jobDesk, schedule, contact, status })
 
         const savedEmployee = await newEmployee.save();
+        console.log('Empleado guardado en BD:', savedEmployee);
         res.status(201).json(savedEmployee);
     } catch (error) {
+        console.error('Error al guardar empleado:', error);
         res.status(500).json({ message: 'Error al agregar empleado', error })
     }
 })

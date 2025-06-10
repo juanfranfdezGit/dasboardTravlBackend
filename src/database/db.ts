@@ -1,13 +1,29 @@
-import mongoose from 'mongoose';
+import mysql from 'mysql';
+import dotenv from 'dotenv';
 
-const connectDB = async () => {
-    try {
-        await mongoose.connect('mongodb://127.0.0.1:27017/mirandadatabase');
-        console.log('MongoDB conectado');
-    } catch (error) {
-        console.error('Error al conectar a MongoDB:', error);
-        process.exit(1);
-    }
+dotenv.config();
+
+const username = process.env.USERNAME as string;
+const password = process.env.PASSWORD as string;
+
+const connectDB = () => {
+    const connection = mysql.createConnection({
+        host: 'localhost',
+        user: username,         
+        password: password,  
+        database: 'dashboardtravl'
+    });
+
+    connection.connect((err) => {
+        if (err) {
+            console.error('Error al conectar a MySQL:', err);
+            process.exit(1);
+        } else {
+            console.log('MySQL conectado');
+        }
+    });
+
+    return connection;
 };
 
 export default connectDB;

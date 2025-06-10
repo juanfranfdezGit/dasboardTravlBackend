@@ -5,7 +5,7 @@ import User from '../database/models/users';
 dotenv.config();
 
 const JWT_SECRET = process.env.JWT_SECRET as string;
-const JWT_EXPIRES_IN: string = process.env.JWT_EXPIRES_IN ?? '1h';
+const JWT_EXPIRES_IN: string = process.env.JWT_EXPIRES_IN ?? '24h';
 const expiresIn = JWT_EXPIRES_IN as jwt.SignOptions['expiresIn'];
 
 export async function login( username: string, password: string ): Promise< string | null > {

@@ -1,2 +1,2 @@
 
-Travl Backend app with Node - Mongo - SQL
+Travl Backend app with Node - Mongo/SQL
